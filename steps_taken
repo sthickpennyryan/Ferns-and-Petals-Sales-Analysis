@@ -1,2 +1,40 @@
 Combined the 3 Excel spreadsheets into one file for ease of use
-  Data - Get Data from File - Excel spreadsheets - repeat for both
+  Data - Load Power Query
+  Power Query - New Source - From Folder - transform data
+
+
+Provisional Plan: 
+Extract transform load
+
+EDA - understand the data, any links, compare formatting across sheets
+Cleaning - standardise format for values, dates etc throughout the sheets
+Transform 
+Data Modelling
+Data Analysis - Pivot tables and measures
+Excel Dashboard
+
+
+Provisional Checks:
+
+Customer Table:
+    No errors across all columns
+     Customer_ID, Name, Contact, Email, Gender and Address all unique distinct which is ideal
+      -- Note: Name has the potential to have duplicates if the rows span long enough as names can duplicate
+      City has 86 distinct and 73 unique - many customers can be in the same city so this is fine.
+
+
+Orders Table:
+  No errors across the columns
+  Order ID, Customer_ID -- distinct and unique which is good no duplicates
+  Product_ID, Quantity, Order_Date, Otder_Time, Delivery_Date, Delivery_Time, Location - no errors many distinct/unique but everything seems fine
+
+Products Table:
+  Product_ID, Price, Description - all unique and distinct
+  Product_Name is 68 distinct and 66 unique --- this should be all unique - query/change
+  Category - 7 distinct 0 unique so 7 categories used over multiple products - this is fine
+  Occasion - 7 distinct 0 unique so 7 categories used over multiple - this is fine
+
+--- Common links: Customer_ID links customer table and Orders Table
+Product_ID links products Table and Orders Table
+    
+    
