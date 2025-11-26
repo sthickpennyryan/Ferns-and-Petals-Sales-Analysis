@@ -36,5 +36,12 @@ Products Table:
 
 --- Common links: Customer_ID links customer table and Orders Table
 Product_ID links products Table and Orders Table
-    
-    
+
+--- Creating relationships between tables
+Customer_ID primary in customers.
+Product_ID primary in product --- both are 1 to many relationships
+
+--- Further columns created
+Revenue created – =Orders[Price (INR)] * Orders[Quantity]
+Order Day created - =FORMAT(Orders[Order_Date], "DDDD")
+
